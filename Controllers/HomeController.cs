@@ -12,7 +12,10 @@ namespace inhandhp.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            //return View();
+            return Redirect("https://inhandhp.azurewebsites.net/homepage/pages/home.html");
+            //return Redirect("https://www.inhandplus.com/homepage/pages/home.html");
+
         }
 
         public IActionResult About()
