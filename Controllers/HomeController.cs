@@ -5,17 +5,34 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using inhandhp.Models;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 
 namespace inhandhp.Controllers
 {
     public class HomeController : Controller
     {
+        protected readonly IConfiguration Configuration;
+        protected readonly IHostingEnvironment HostingEnvironment;
+
+        public HomeController(IConfiguration configuration, IHostingEnvironment hostingEnv)
+        {
+            this.Configuration = configuration;
+            this.HostingEnvironment = hostingEnv;
+        }
+
         public IActionResult Index()
         {
             //return View();
-            //return Redirect("https://inhandhp.azurewebsites.net/homepage/pages/home.html");
-            return Redirect("https://www.inhandplus.com/homepage/pages/home.html");
 
+            if(this.HostingEnvironment.IsDevelopment())
+            {
+                return Redirect("http://localhost:52673/homepage/pages/home.html");
+            } 
+            else
+            {
+                return Redirect("https://www.inhandplus.com/homepage/pages/home.html");
+            }
         }
 
         public IActionResult About()
