@@ -6,23 +6,9 @@
     content="text/html;charset=UTF-8"
   /><!-- /Added by HTTrack -->
   <head>
-    <meta http-equiv="X-UA-Compatible" id="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>마커 생성하기</title>
 
-    <script src="../../ajax.googleapis.com/ajax/libs/webfont/1.5.6/webfont8457.js?v=09241455"></script>
-    <script>
-      WebFont.load({
-        google: {
-          families: [
-            "Lato:400",
-            "Montserrat:700,400",
-            "Marcellus+SC:400",
-            "Playfair+Display:400",
-          ],
-        },
-      });
-    </script>
-    
-    
     <style>
       .restrictedWrapper,
       body.editor,
@@ -4282,7 +4268,7 @@
                   style=""
                 >
                   <div id="itemElement12619754" class="item-element" style="">
-                    <p class="" style="text-align: center; font-size: 15px">
+                    <p class="" style="text-align: center; font-size: 20px">
                       Please contact us if you are interested in partnering with
                       us or learning more about our product.
                     </p>
@@ -4291,8 +4277,7 @@
               </div>
             </section>
           </div>
-         
-         
+
           <div
             id="sectionWrapper4287484"
             class="section-wrapper sectionWrapper4287484 custom-section custom-section sectionColumn-1 custom-reverse-left-and-right-notUse"
@@ -4393,16 +4378,13 @@
                   data-itemNo="12695684"
                   cid="item12695684"
                   style="text-align: center"
-                  
                 >
-                
                   <div
                     id="itemElement12695684"
                     class="item-element"
                     style="width: 40%"
                   ></div>
                 </div>
-
 
                 <div
                   id="item12685697"
@@ -4415,11 +4397,15 @@
                   cid="item12685697"
                   style=""
                 >
-                  <div
-                    id="itemElement12685697"
-                    class="item-element"
-                    style=""
-                  ></div>
+                  <div id="itemElement12685697" class="item-element" style="">
+                    <p class="" style="text-align: center; font-size: 20px">
+                      <span
+                        text-style-option="color"
+                        style="color: rgb(0, 0, 0)"
+                        >Location</span
+                      >
+                    </p>
+                  </div>
                 </div>
                 <div
                   id="item12695680"
@@ -4432,16 +4418,12 @@
                   cid="item12695680"
                   style="text-align: center"
                 >
-                
                   <div
                     id="itemElement12695680"
                     class="item-element"
                     style="width: 40%"
                   ></div>
                 </div>
-
-
-
 
                 <div
                   id="item12685748"
@@ -4456,8 +4438,7 @@
                 >
                   <div id="itemElement12685748" class="item-element" style="">
                     <p class="" style="text-align: center; font-size: 16px">
-                      2F of TIPS town S2 168 Yeoksam-ro
-                      Seoul, 06248, Korea
+                      2F of TIPS town S6 168 Yeoksam-ro Seoul, 06248, Korea
                     </p>
                   </div>
                 </div>
@@ -4473,28 +4454,66 @@
                   cid="item12695874"
                   style="text-align: center"
                 >
-                
                   <div
                     id="itemElement12695874"
                     class="item-element"
                     style="width: 93%"
                   >
-                 
-                    <img
-                      class="img ratio-default"
-                      imgSrc="/uploadedFiles/80378/default/image_1561000118857.jpg"
-                      src="../../contents.sixshop.com/thumbnails/uploadedFiles/80378/default/image_1561000118857_1000.jpg"
-                    />
+                    <div id="map" style="width: 100%; height: 750px"></div>
 
+                    <script
+                      type="text/javascript"
+                      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=759266016e5440285e10d42bf2a4f1a1"
+                    ></script>
 
+                    <div id="map" style="width: 100%; height: 350px"></div>
+                    <script>
+                      var mapContainer = document.getElementById("map"), // 지도를 표시할 div
+                        mapOption = {
+                          center: new kakao.maps.LatLng(
+                            37.49513083859715,
+                            127.03748445378956
+                          ), // 지도의 중심좌표
+                          level: 3, // 지도의 확대 레벨
+                        };
 
+                      var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
+                      // 마커가 표시될 위치입니다
+                      var markerPosition = new kakao.maps.LatLng(
+                        37.49513083859715,
+                        127.03748445378956
+                      );
+
+                      // 마커를 생성합니다
+                      var marker = new kakao.maps.Marker({
+                        position: markerPosition,
+                      });
+
+                      // 마커가 지도 위에 표시되도록 설정합니다
+                      marker.setMap(map);
+
+                      // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+                      // marker.setMap(null);
+
+                      var iwContent =
+                          '<div style="padding: 15px; text-align: center;">InHandPlus</div>',
+                        iwPosition = new kakao.maps.LatLng(
+                          37.49513083859715,
+                          127.03748445378956
+                        ); //인포윈도우 표시 위치입니다
+
+                      // 인포윈도우를 생성합니다
+                      var infowindow = new kakao.maps.InfoWindow({
+                        content: iwContent,
+                      });
+
+                      // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+                      infowindow.open(map, marker);
+                    </script>
                   </div>
-               
-
                 </div>
-                  
-             
+
                 <div
                   id="item12695877"
                   class="item-wrapper spacer-element"
@@ -4756,8 +4775,6 @@
           }
         }
       }
-
-     
     </script>
   </body>
 
