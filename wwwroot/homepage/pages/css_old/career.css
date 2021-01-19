@@ -1,0 +1,78 @@
+.nav {
+  height: 70px;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+
+.align-items-center {
+  -webkit-box-align: center !important;
+  align-items: center !important;
+}
+
+.site-logo {
+  width: 200px;
+  height: 29.97px;
+  letter-spacing: 0.15em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.nav-right_items {
+  display: flex;
+  margin-right: auto;
+  text-align: center;
+}
+
+.nav-item {
+  color: #343a40 !important;
+  padding: 0.2rem !important;
+  font-size: 14px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+user agent stylesheet a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.company-name {
+  margin-left: 20px;
+}
+
+.body {
+  display: flex;
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+h5 {
+  display: block;
+  font-size: 0.83em;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin: 0px auto;
+  align-items: center;
+}
